@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card mb-3">
+        <div class="card-header">
+            <h3 class="text-center mt-3">
+                <span class="font-weight-bold">Every F1 Circuit Ever</span>
+            </h3>
+        </div>
+        <ng-container>
+            <div class="card-body" *ngFor="let circuit of circuits">
+                <div class="row">
+                    <div class="col-2 text-center" style="max-width: 80px;">
+                        <img src="../../../assets/images/flags/{{ circuit.Location.country }}.png" alt=""
+                            style="width: 60px; height: auto;" class="mr-4 ml-auto" />
+                    </div>
+                    <div class="col">
+                        <h4>
+                            <a [href]="circuit.url" target="_blank">{{ circuit.circuitName }}</a>
+                        </h4>
+                        <h5 class="font-italic">{{ circuit.Location.locality }}, {{ circuit.Location.country }}</h5>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

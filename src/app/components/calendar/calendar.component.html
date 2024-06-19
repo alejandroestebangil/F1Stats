@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card mb-3">
+        <div class="card-header">
+            <h3 class="text-center mt-3">
+                <span class="font-weight-bold">{{
+                    raceCalendar.season
+                    }}</span>
+                Calendar
+            </h3>
+        </div>
+        <a routerLink="/LastRace" class="btn btn-primary btn-block">
+            LAST RACE RESULTS
+        </a>
+        <ng-container>
+            <div class="card-body" *ngFor="let race of raceCalendar.Races">
+                <div class="row">
+                    <div class="col-2 text-center" style="max-width: 80px;">
+                        <img src="../../../assets/images/flags/{{ race.Circuit.Location.country }}.png" alt=""
+                            style="width: 60px; height: auto;" class="mr-4 ml-auto" />
+                    </div>
+                    <div class="col">
+                        <h4>
+                            <span class="badge badge-success">Round {{ race.round }}</span> -
+                            {{ race.raceName }}
+                        </h4>
+                        <a [href]="race.url" target="_blank">{{ race.Circuit.circuitName }}</a>
+                    </div>
+                    <div class="col text-right">
+                        <h4>{{ race.date | date: "dd/MM/yyyy" }}</h4>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

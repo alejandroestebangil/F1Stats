@@ -1,0 +1,81 @@
+<div class="container">
+    <h1 style="text-align: center; margin-top: 75px; font-weight: bolder;">WELCOME to F1STATS</h1>
+    <div class="card mb-4">
+        <div class="card-header text-center">
+            <h3 class="font-weight-bold">
+                Soon... the
+                <span class="font-weight-bold">{{nextRace[0].raceName}}</span>
+            </h3>
+            <p>
+                {{ nextRace[0].Circuit.circuitName }} |
+                {{ nextRace[0].date | date: "dd/MM/yyyy" }}
+                <span class="font-italic" style="color: black;">({{ nextRaceUTCtime }} UTC)</span>
+            </p>
+        </div>
+        <a routerLink="/Calendar" class="btn btn-primary btn-block"
+            style="border-top-left-radius: 0; border-top-right-radius: 0">
+            2024 SEASON CALENDAR
+        </a>
+        <img src="../../../assets/images/f1stats.png" alt="F1 Stats" class="img-fluid" style="width: 100%">
+    </div>
+
+</div>
+<div>
+
+</div>
+<div class="card" style="margin-top: 80px">
+    <div class="card-header text-center">
+        <h3 class="font-weight-bold">
+            Last Race was the
+            <span>{{lastRaceResults.Races[0].raceName}}</span>
+        </h3>
+        <p>
+            {{ lastRaceResults.Races[0].Circuit.circuitName }} |
+            {{ lastRaceResults.Races[0].date | date: "dd/MM/yyyy" }}
+        </p>
+    </div>
+
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Pos.</th>
+                    <th >Driver</th>
+
+                    <th>Constructor</th>
+                    <th class="hide-xs">Laps</th>
+                    <th class="hide-sm">Time</th>
+                    <th>Pts.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Map through race results - only show first 3 results -->
+                <tr *ngFor="let driver of lastRaceResults.Races[0].Results">
+                    <td>{{ driver.position }}</td>
+                    <td>
+                        <img src="../../../assets/images/flags/{{ driver.Driver.nationality }}.png" alt=""
+                            style="width: 30px; height: auto" class="mr-2 hide-md" />{{ driver.Driver.familyName }}
+                    </td>
+                    <td>
+                        {{
+                        driver.Constructor.name === "Haas F1 Team"
+                        ? "Haas"
+                        : driver.Constructor.name === "Alpine F1 Team"
+                        ? "Alpine"
+                        : driver.Constructor.name
+                        }}
+                    </td>
+                    <td class="hide-xs">{{ driver.laps }}</td>
+                    <td class="hide-sm">{{ driver.Time.time }}</td>
+                    <td>
+                        {{ driver.points }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a routerLink="/LastRace" class="btn btn-primary btn-block">
+            FULL RACE RESULTS
+        </a>
+    </div>
+    <div class="card-header" style="margin-bottom: 30px;">by Alejandro Esteban Gil</div>
+</div>

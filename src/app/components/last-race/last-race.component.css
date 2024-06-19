@@ -1,0 +1,32 @@
+.full-width {
+  width: 100%;
+}
+
+.spinner-border {
+  height: 100px;
+  width: 100px;
+  margin: 50px auto !important;
+  border-width: 0.4em;
+}
+
+.card-body {
+  padding-bottom: 0;
+}
+
+.container {
+  margin-top: 85px;
+}
+
+.card-body {
+  background-color: white;
+}
+
+.card-header {
+  background-color: #ff0000;
+  color: white;
+}
+
+.card {
+  background-color: #ff0000;
+  color: white;
+}

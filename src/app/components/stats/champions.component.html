@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Drivers with Most Championships</h1>
+    <table class="table">
+        <thead>
+            <tr style="color:black; font-size: large; font-weight: bold;">
+                <th>#</th>
+                <th>Driver Name</th>
+                <th>Nationality</th>
+                <th>Years Won</th>
+                <th>Championships</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let driver of drivers; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ driver.name }}</td>
+                <td>{{ driver.nationality }}</td>
+                <td>{{ driver.years.join(', ') }}</td>
+                <td>{{ driver.championships }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

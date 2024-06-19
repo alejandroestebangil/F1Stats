@@ -1,0 +1,49 @@
+<div class="container">
+  <h3 class="mb-4">Championship Standings</h3>
+  <ul class="nav nav-tabs">
+    <li class="nav-itemm">
+      <a class="nav-link" routerLink="/DriverStandings">Driver Standings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">Constructor Standings</a>
+    </li>
+  </ul>
+
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Pos.</th>
+
+          <th colspan="1">Constructor</th>
+          <th>Pts.</th>
+          <th class="hide-sm">Wins</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let constructor of constructorStandings[0].ConstructorStandings">
+          <td>{{ constructor.position }}</td>
+          <td>
+            <img
+              src="../../../assets/images/flags/{{ constructor.Constructor.nationality }}.png"
+              alt=""
+              style="width: 30px; height: auto"
+              class="mr-2 flag"
+            />
+            {{
+              constructor.Constructor.name === "Haas F1 Team"
+                ? "Haas"
+                : constructor.Constructor.name === "Alpine F1 Team"
+                ? "Alpine"
+                : constructor.Constructor.name
+            }}
+          </td>
+          <td>{{ constructor.points }}</td>
+          <td class="hide-sm">{{ constructor.wins }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

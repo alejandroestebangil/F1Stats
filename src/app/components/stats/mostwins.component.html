@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Drivers with Most Race Wins</h1>
+    <table class="table">
+        <thead>
+            <tr style="color:black; font-size: large; font-weight: bold;">
+                <th>#</th>
+                <th>Driver Name</th>
+                <th>Nationality</th>
+                <th>Wins</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let driver of drivers; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ driver.name }}</td>
+                <td>{{ driver.nationality }}</td>
+                <td>{{ driver.wins }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

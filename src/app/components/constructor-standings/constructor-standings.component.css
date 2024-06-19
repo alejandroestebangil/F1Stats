@@ -1,0 +1,50 @@
+@media (max-width: 767px) {
+  h3 {
+    text-align: center;
+  }
+
+  ul {
+    justify-content: center;
+  }
+}
+
+.spinner-border {
+  height: 100px;
+  width: 100px;
+  margin: 50px auto !important;
+  border-width: 0.4em;
+}
+
+@media (max-width: 477px) {
+  .flag {
+    margin-right: 100% !important;
+  }
+}
+
+@media (max-width: 375px) {
+  img.car {
+    width: 80px !important;
+  }
+}
+
+.container {
+  margin-top: 85px;
+}
+
+.card-body {
+  background-color: white;
+}
+
+.card-header {
+  background-color: #ff0000;
+  color: white;
+}
+
+.nav-item {
+  color: white;
+  background-color: #ff0000;
+}
+
+.nav-link {
+  color: white;
+}

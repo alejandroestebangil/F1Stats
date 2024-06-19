@@ -1,0 +1,25 @@
+.countdown {
+    text-align: center;
+}
+
+::ng-deep .countdown.countdown {
+    display: block !important;
+}
+
+.container {
+    margin-top: 80px;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.card-body {
+    background-color: white;
+}
+
+.card-header {
+    background-color: #ff0000;
+    color: white;
+}
