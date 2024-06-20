@@ -1,6 +1,7 @@
 # F1Stats
 
-- F1Stats proyect where I use Angular and ErgastAPI to display stats about current Formula 1.
+- F1Stats, proyect where I use Angular and ErgastAPI to display stats about current Formula 1.
+- F1Stats, proyecto donde uso Angular y ErgastAPI para mostrar estadísticas sobre la Formula 1 actual.
 
 ## SET UP
 
